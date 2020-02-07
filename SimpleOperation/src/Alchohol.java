@@ -18,8 +18,10 @@ public class Alchohol {
         var beerSum = beerLiters*beerPrice;
         var whiskeySum = whiskeyLiters*priceWhiskey;
 
-        System.out.println(rakiaSum);
-        System.out.println(beerSum);
+        var totalSum = rakiaSum+whineSum+beerSum+whiskeySum;
+
+        System.out.printf("%.2f",totalSum);
+
 
     }
 }
