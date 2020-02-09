@@ -9,13 +9,25 @@ public class AreaOfAll {
         switch (figure){
             case "square":
                 var squareMeters = Double.parseDouble(scan.nextLine());
-                System.out.println(squareMeters*squareMeters);
+                System.out.printf("%.3f",squareMeters*squareMeters);
                 break;
 
             case "rectangle":
                 var sideA = Double.parseDouble(scan.nextLine());
                 var sideB = Double.parseDouble(scan.nextLine());
-                System.out.println(sideA*sideB);
+                System.out.printf("%.3f",sideA*sideB);
+                break;
+
+            case "circle":
+                var r = Double.parseDouble(scan.nextLine());
+                var area = Math.PI*(r*r);
+                System.out.printf("%.3f",area);
+                break;
+
+            case "triangle":
+                var L = Double.parseDouble(scan.nextLine());
+                var H = Double.parseDouble(scan.nextLine());
+                System.out.printf("%.3f", L/2*H);
                 break;
 
         }
