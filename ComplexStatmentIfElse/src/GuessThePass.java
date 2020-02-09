@@ -6,7 +6,7 @@ public class GuessThePass {
 
         var pass = new String(scan.nextLine());
 
-        if (pass "bub".equals(pass)) {
+        if ("bub".equals(pass)) {
             System.out.println("Welkome");
         }
         else{
