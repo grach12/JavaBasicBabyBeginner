@@ -12,7 +12,7 @@ public class Scholarship {
         var scoreScholarship = 0.0;
 
 
-        if ((income < minimumSalary)||(score>4.50)) {
+        if ((income < minimumSalary)&&(score>4.50)) {
             socialScolarship = minimumSalary * 0.35;
             System.out.printf("You get a Social scholarship %.0f BGN", Math.floor(socialScolarship));
         }
@@ -27,6 +27,7 @@ public class Scholarship {
         else{
             System.out.println("You cannot get a scholarship!");
         }
+
 
     }
 }
