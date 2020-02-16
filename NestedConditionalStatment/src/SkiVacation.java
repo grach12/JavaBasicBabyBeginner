@@ -66,9 +66,6 @@ public class SkiVacation {
                 System.out.printf("%.2f", finalPrice);
             }
         }
-
-
-
         else if ("president apartment".equals(roomType)&&(days<10)){
             price = 35.00;
             if (feedback.equals("positive")){
@@ -109,8 +106,6 @@ public class SkiVacation {
                 System.out.printf("%.2f", finalPrice);
             }
         }
-
-
 
     }
 }

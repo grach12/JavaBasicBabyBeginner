@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ComplexStatmentIfElse/ComplexStatmentIfElse.iml" filepath="$PROJECT_DIR$/ComplexStatmentIfElse/ComplexStatmentIfElse.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasicBabyBeginner.iml" filepath="$PROJECT_DIR$/JavaBasicBabyBeginner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loops/Loops.iml" filepath="$PROJECT_DIR$/Loops/Loops.iml" />
     </modules>
   </component>
 </project>
