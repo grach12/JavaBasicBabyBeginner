@@ -14,45 +14,64 @@ public class FishBoat {
         var summerAutumn = 4200;
         var winter = 2600;
 
-if (season.equals("Spring")) {
-    if (fishman <= 6) {
-        discount = (spring * 0.10);
-        price = (spring - discount);
-        // System.out.println(price);
-    } else if (fishman <= 11) {
-        discount = (spring * 0.15);
-        price = (spring - discount);
-    } else {
-        discount = (spring * 0.25);
-        price = (spring - discount);
-    }
-}
-else if (season.equals("Summer")||season.equals("Autumn")) {
-    if (fishman <= 6) {
-        discount = (spring * 0.10);
-        price = (summerAutumn - discount);
-        // System.out.println(price);
-    } else if (fishman <= 11) {
-        discount = (summerAutumn * 0.15);
-        price = (summerAutumn - discount);
-    } else {
-        discount = (summerAutumn * 0.25);
-        price = (summerAutumn - discount);
-    }
-}
-else if (season.equals("Winter")) {
-    if (fishman <= 6) {
-        discount = (winter * 0.10);
-        price = (winter - discount);
-        // System.out.println(price);
-    } else if (fishman <= 11) {
-        discount = (winter * 0.15);
-        price = (winter - discount);
-    } else {
-        discount = (winter * 0.25);
-        price = (winter - discount);
-    }
-}
-        System.out.println(price);
+        switch (season) {
+            case "Spring":
+                if (fishman <= 6) {
+                    discount = (spring * 0.10);
+                    price = (spring - discount);
+                    // System.out.println(price);
+                } else if (fishman <= 11) {
+                    discount = (spring * 0.15);
+                    price = (spring - discount);
+                } else {
+                    discount = (spring * 0.25);
+                    price = (spring - discount);
+                }
+                break;
+            case "Summer":
+            case "Autumn":
+                if (fishman <= 6) {
+                    discount = (spring * 0.10);
+                    price = (summerAutumn - discount);
+                    // System.out.println(price);
+                } else if (fishman <= 11) {
+                    discount = (summerAutumn * 0.15);
+                    price = (summerAutumn - discount);
+                } else {
+                    discount = (summerAutumn * 0.25);
+                    price = (summerAutumn - discount);
+                }
+                break;
+            case "Winter":
+                if (fishman <= 6) {
+                    discount = (winter * 0.10);
+                    price = (winter - discount);
+                    // System.out.println(price);
+                } else if (fishman <= 11) {
+                    discount = (winter * 0.15);
+                    price = (winter - discount);
+                } else {
+                    discount = (winter * 0.25);
+                    price = (winter - discount);
+                }
+                break;
+        }
+
+
+        if (season.equals("Autumn")) {
+            if (budget >= price) {
+                System.out.printf("Yes! You have %.2f leva left.", (budget - price));
+            } else {
+                System.out.printf("Not enough money! You need %.2f leva.", (price - budget));
+            }
+        }
+        else if (fishman % 2 == 0) {
+            price = price - price * 0.05;
+            if (budget >= price) {
+                System.out.printf("Yes! You have %.2f leva left.", (budget - price));
+            } else {
+                System.out.printf("Not enough money! You need %.2f leva.", (price - budget));
+            }
+        }
     }
 }
