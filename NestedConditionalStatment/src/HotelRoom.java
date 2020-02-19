@@ -19,17 +19,17 @@ public class HotelRoom {
 
                 if (nights > 14) {
                     apartmentPrice = (apartmentPrice - apartmentPrice * 0.1) * nights;
-                    System.out.println(apartmentPrice);
+                    System.out.printf("Apartment: %.2f lv.%n",apartmentPrice);
                 } else {
-                    System.out.println(apartmentPrice * nights);
+                    System.out.printf("Apartment: %.2f lv.%n",(apartmentPrice * nights));
                 }
 
                 if ((nights > 7) && (nights < 14)) {
                     studioPrice = (studioPrice - studioPrice * 0.05) * nights;
-                    System.out.println(studioPrice);
+                    System.out.printf("Studio: %.2f lv.",studioPrice);
                 } else if (nights > 14) {
                     studioPrice = (studioPrice - studioPrice * 0.30) * nights;
-                    System.out.println(studioPrice);
+                    System.out.printf("Studio: %.2f lv.",studioPrice);
                 }
                 break;
             case "June":
@@ -38,31 +38,30 @@ public class HotelRoom {
                 apartmentPrice = 68.70;
                 if (nights > 14) {
                     apartmentPrice = (apartmentPrice - apartmentPrice * 0.1) * nights;
-                    System.out.println(apartmentPrice);
+                    System.out.printf("Apartment: %.2f lv.%n",apartmentPrice);
                 } else {
-                    System.out.println(apartmentPrice * nights);
+                    System.out.printf("Apartment: %.2f lv.%n", (apartmentPrice * nights));
                 }
 
                 if (nights > 14) {
-                    studioPrice = (studioPrice - studioPrice * 0.30) * nights;
-                    System.out.println(studioPrice);
+                    studioPrice = (studioPrice - studioPrice * 0.20) * nights;
+                    System.out.printf("Studio: %.2f lv.", studioPrice);
                 } else {
-                    System.out.println(studioPrice * nights);
+                    System.out.printf("Studio: %.2f lv.", studioPrice * nights);
                 }
                 break;
-//надолу да се прегледа
             case "July":
             case "August":
                 studioPrice = 76.00;
                 apartmentPrice = 77.00;
                 if (nights > 14) {
                     apartmentPrice = (apartmentPrice - apartmentPrice * 0.1) * nights;
-                    System.out.println(apartmentPrice);
+                    System.out.printf("Apartment: %.2f lv.%n", apartmentPrice);
                 } else {
-                    System.out.println(apartmentPrice * nights);
+                    System.out.printf("Apartment: %.2f lv.%n",(apartmentPrice * nights));
                 }
 
-                System.out.println(studioPrice * nights);
+                System.out.printf("Studio: %.2f lv.", (studioPrice * nights));
                 break;
         }
         }
