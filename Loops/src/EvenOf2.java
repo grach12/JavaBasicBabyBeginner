@@ -10,5 +10,7 @@ public class EvenOf2 {
             num=num*2*2;
         }
 
+
     }
 }
+
