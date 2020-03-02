@@ -21,7 +21,7 @@ if (leftSum==rightSum){
 }
 else{
     int difference = Math.abs(leftSum- rightSum);
-    System.out.println("No, diff = "+difference);
+    System.out.printf("No, diff = %d",difference);
 }
     }
 }
