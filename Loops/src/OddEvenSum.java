@@ -10,12 +10,17 @@ public class OddEvenSum {
             int number = Integer.parseInt(scan.nextLine());
             if (i % 2 == 0) {
                 evenSum += number;  //evenSum=evenSum+number;
-                System.out.println(Math.abs(evenSum-oddSum));
             } else {
                 oddSum += number;           //oddSum= oddSum+number;
-                System.out.println(Math.abs(evenSum-oddSum));
-            }
+                }
         }
-
+        if (oddSum == evenSum)
+        {
+            System.out.printf("Yes, sum = %d ", oddSum);
+        }
+        else
+        {
+            System.out.printf("No, diff = %d ", Math.abs(oddSum - evenSum));
+        }
     }
 }
