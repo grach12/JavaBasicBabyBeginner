@@ -8,30 +8,39 @@ public class OddEvenPosition {
         //double sum = 0;
        // double min = Double.MAX_VALUE;
        //double max = Double.MIN_VALUE;
-        double oddSum=9.00;
+        double oddSum=0;
         double oddMin=Double.MAX_VALUE;
         double oddMax= Double.MIN_VALUE;
-        double evenSum=8.00;
+        double evenSum=0;
         double evenMin=Double.MAX_VALUE;
         double evenMax=Double.MIN_VALUE;
 
         for (int i = 0; i <n ; i++) {
-            int number = Integer.parseInt(scan.nextLine());
+            double number = Double.parseDouble(scan.nextLine());
             if (i % 2 == 0) {
-                evenSum += number;  //evenSum=evenSum+number;
-            }
+                oddSum = number+oddSum;  //evenSum=evenSum+number;
 
-
-            sum = number+sum;
-            if (number>max) {
-                max = number;
-            }else if (number<min){
-                min = number;
+            if (number>oddMax) {
+                oddMax = number;
+            }else if (number<oddMin){
+                oddMin = number;
             }
         }
-        System.out.println(sum);
-        System.out.println(min);
-        System.out.println(max);
+            else {
+                evenSum=number+evenSum;
+                if(number>evenMin){
+                    evenMax=number;
+                }else if (number<evenMin){
+                    evenMin=number;
+                }
+            }
+        }
+        System.out.println(oddSum);
+        System.out.println(oddMin);
+        System.out.println(oddMax);
+        System.out.println(evenSum);
+        System.out.println(evenMin);
+        System.out.println(evenMax);
 
     }
 }
