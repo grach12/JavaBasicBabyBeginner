@@ -31,7 +31,7 @@ public class Histogram {
             }
         }
         //number=i-number;
-        //p1= number/i*100;
+        //p1= number/i*100; защо използваме p като имаме i?
         p1=p1/n*100;
         p2=p2/n*100;
         p3=p3/n*100;
