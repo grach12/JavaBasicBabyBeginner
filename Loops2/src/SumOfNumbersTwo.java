@@ -7,7 +7,7 @@ public class SumOfNumbersTwo {
         String readtext = scan.nextLine();
 
         while (!"Stop".equals(readtext)){
-            int number = Integer.parseInt(readtext); //превръщаме Int в Текст
+            int number = Integer.parseInt(readtext); //превръщаме Int в String
             sum = number+sum; //при въвеждане на Stop сумираме числата
             readtext = scan.nextLine(); //след въвеждане на Stop , без него ще имаме безкраен цикъл
         }
