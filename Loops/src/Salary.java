@@ -23,7 +23,7 @@ public class Salary {
             if (name.equals("Reddit")) {
                 salary = salary - 50;
             }
-            else if (salary<=0){
+            if (salary<=0){
                 System.out.println("You have lost your salary.");
             return;} // с return излизам от кода
 
