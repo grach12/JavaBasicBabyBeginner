@@ -14,7 +14,7 @@ public class Graduation {
             double grade = Double.parseDouble(scan.nextLine());
             if (grade>=4){
                 avgGrade= avgGrade+grade;
-                gradeCount++;
+                gradeCount++; // броча се променя само пи оценки над или=4
             }
         }
         avgGrade=avgGrade/gradeCount;
