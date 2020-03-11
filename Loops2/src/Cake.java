@@ -9,7 +9,7 @@ public class Cake {
         int pieceCake = width*lenght;
         String input = scan.nextLine(); // същото ли е като "";
 
-        while (!input.equals("STOP")){  //същото ли е като input=="Stop"
+        while (!input.equals("STOP")){  //същото ли е като input=="Stop" и какво става ако има други символи
             int piecesTaken = Integer.parseInt(input);
             pieceCake-=piecesTaken;
 
