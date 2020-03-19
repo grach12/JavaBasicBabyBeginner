@@ -20,10 +20,10 @@ public class Building {
                 }
                 else //апартаменти
                 {
-                    System.out.printf("A%d%d %n", i, j);
+                    System.out.printf("A%d%d ", i, j);
                 }
             }
-
+            System.out.println();
         }
     }
 }
