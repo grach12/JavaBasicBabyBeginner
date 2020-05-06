@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ComplexStatmentIfElse/ComplexStatmentIfElse.iml" filepath="$PROJECT_DIR$/ComplexStatmentIfElse/ComplexStatmentIfElse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamentals/Fundamentals.iml" filepath="$PROJECT_DIR$/Fundamentals/Fundamentals.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasicBabyBeginner.iml" filepath="$PROJECT_DIR$/JavaBasicBabyBeginner.iml" />
       <module fileurl="file://$PROJECT_DIR$/Loops/Loops.iml" filepath="$PROJECT_DIR$/Loops/Loops.iml" />
       <module fileurl="file://$PROJECT_DIR$/Loops2/Loops2.iml" filepath="$PROJECT_DIR$/Loops2/Loops2.iml" />
