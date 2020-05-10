@@ -6,25 +6,25 @@ public class ExamResults {
 
 
         String input = scan.nextLine();
-
+        boolean banned = false;
         while (!"Midnight".equals(input)) {
             double grade = 0;
             double eachPoints = 0.0;
 
             for (int i = 1; i <=6; i++) {
                 double points = Double.parseDouble(scan.nextLine());
+
                 if (points < 0)  //"{име на студент} was cheating!"
                 {
-                     System.out.printf("%s was cheating!%n", input);break;     }
+                     banned=true; break;     }
 
+                    eachPoints += points;
+                    //System.out.println(grade*0.06);
+            }
 
-                eachPoints += points;
+            grade = Math.floor(eachPoints / 6);
 
-                grade = Math.floor(eachPoints/6);
-
-                //System.out.println(grade*0.06);
-
-            }if (grade*0.06>=5){
+            if (grade*0.06>=5){
                 System.out.println("===================");
                 System.out.println("|   CERTIFICATE   |");
                 System.out.printf("|    %.2f/6.00    |%n",grade*0.06);
@@ -32,10 +32,13 @@ public class ExamResults {
                 System.out.printf("Issued to %s",input);
             }
 
-            else if (grade*0.06>=3){
+            else if ((grade*0.06>=3)&&(!banned)){
                 System.out.printf("%s - %.2f%n",input, grade*0.06);
-            }else if (grade>1&&grade*0.06<3){
+            }else if ((grade>0&&grade*0.06<3)&&(!banned)){
                 System.out.printf("%s - 2.00%n",input);
+            }
+            else {
+                System.out.printf("%s was cheating!%n", input);
             }
             input = scan.nextLine();
         }
