@@ -4,15 +4,37 @@ public class ExamRetention {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int n = Integer.parseInt(scan.nextLine());
+        double students = Double.parseDouble(scan.nextLine());
         int seasons = Integer.parseInt(scan.nextLine());
 
 
-        for (int i = 0; i < seasons*2; i++) {
-            n-=1.0*90/100;
-            System.out.println(n);
 
+        double moveOn = 0;
+        double resubscribe = 0;
+
+        //double newStudents = 0;
+
+        for (int i = 1; i <= seasons; i++) {
+            double examOne = 0;
+            double examTwo = 0;
+
+            examOne += Math.ceil(students * 0.9);
+            examTwo += Math.ceil(examOne * 0.9);
+
+            moveOn += Math.ceil(examOne * 0.8);
+            if (seasons == 3) {
+                resubscribe += Math.ceil(moveOn * 0.15);
+            } else {
+                resubscribe += Math.ceil(moveOn * 0.05);
+            }
+            students = moveOn + resubscribe;
+            System.out.println("ExamOne: " + examOne);
+            System.out.println("ExamTwo: " + examTwo);
         }
 
+
+        System.out.println("students: " + students);
+        System.out.println("moveOne: " + moveOn);
+        System.out.println("newStudents: " + moveOn);
     }
 }
