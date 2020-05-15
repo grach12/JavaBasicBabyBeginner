@@ -10,10 +10,11 @@ public class ExamPreparation {
         //  int sumEnergy = 0;
 
         int question = 0;
-        boolean trainer = true;
+
         int task =   Integer.parseInt(scan.nextLine());
         int energy = Integer.parseInt(scan.nextLine());
-
+int sumQuestion = 0;
+boolean trainer = false;
 
         while (students >= 10) {
 
@@ -24,8 +25,9 @@ public class ExamPreparation {
             question = students * 2;
             energy -= 3*question;
            // question++;
+            sumQuestion+=question;
             if (energy <= 0) {
-                trainer = false;
+                trainer = true;
                 break;
             }
 
@@ -38,14 +40,12 @@ public class ExamPreparation {
         }
 
 
-
-        if (trainer=false) {
-            System.out.print("The trainer is too tired!");
-            System.out.printf("Questions answered: %d", question);
-        }
-        else {
+        if (trainer == false) {
             System.out.println("The students are too few!");
             System.out.printf("Problems solved: %d", sumTask);
+        } else {
+            System.out.println("The trainer is too tired!");
+            System.out.printf("Questions answered: %d", sumQuestion);
         }
 
 
